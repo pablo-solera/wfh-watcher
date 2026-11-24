@@ -1,0 +1,25 @@
+{
+  "name": "wfh-watcher",
+  "version": "1.0.0",
+  "description": "Bot de Telegram que avisa con un calendario cuando cambian el teletrabajo de una persona en work-from-home",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "calendar": "tsx src/cli.ts",
+    "bot": "tsx src/bot/telegram.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/bot/telegram.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.65",
+    "dotenv": "^16.4.5",
+    "grammy": "^1.30.0",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

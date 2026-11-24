@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.env*
+!.env.example
+*.log
+data
+tmp
+.vscode
+.opencode
+README.md
