@@ -1,0 +1,18 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - wfh_watcher_data:/app/data
+    networks:
+      - default
+      - wfh
+
+networks:
+  wfh:
+    external: true
+    name: ${WFH_NETWORK:-work-from-home_default}
+
+volumes:
+  wfh_watcher_data:
